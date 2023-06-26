@@ -64,7 +64,7 @@ def test_find_suitable_user():
     assert suitable_users == {"name": "Olga", "age": 45}
 
     # TODO найдите всех пользователей младше 20 лет
-    suitable_users = [i for i in users[:] for key, value in i.items() if key == 'age' and int(value) < 20]
+    suitable_users = [i for i in users[:] if i['age'] < 20]
     assert suitable_users == [
         {"name": "Stanislav", "age": 15},
         {"name": "Maria", "age": 18},
